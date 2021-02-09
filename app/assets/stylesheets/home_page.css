@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1130px) {
   body {
     background-color: transparent;
     background-image: url(https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif);
