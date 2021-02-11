@@ -54,7 +54,7 @@
   }
 
   .play-game {
-    margin-top: -105px;
+    margin-top: -100px;
     margin-left: 33%;
   }
 
@@ -80,7 +80,7 @@
 
   #rules-button {
     height: 100px;
-    width: 70%;
+    width: 100%;
   }
 
   .exclaim {
