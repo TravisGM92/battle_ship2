@@ -9,7 +9,7 @@
     margin-left: 20px;
     position: fixed;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   #space-gif {
@@ -28,7 +28,7 @@
 
   .title p {
     margin-top: 50px;
-    font-size: 25px;
+    font-size: 45px;
     color: black;
     text-align: center;
     text-transform: uppercase;
@@ -59,7 +59,7 @@
   }
 
   .game-rules {
-    margin-top: -100px;
+    margin-top: -90px;
     margin-left: 28%;
   }
 
@@ -75,12 +75,12 @@
 
   #play-button {
     width: 50%;
-    height: 65px;
+    height: 95px;
   }
 
   #rules-button {
     width: 240px;
-    height: 70px;
+    height: 95px;
     width: 60%;
   }
 
