@@ -93,4 +93,10 @@
     from { color: green }
     to { color: rgba(0, 111, 41, 0.2) }
   }
+
+  #army-tank-gif {
+    margin-top: -20px;
+    width: 200px;
+    margin-left: 40%;
+  }
 }
