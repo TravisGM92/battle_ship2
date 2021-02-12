@@ -18,7 +18,8 @@
 
 .thats-me p {
   font-size: 65px;
-  font-family: 'Press Start 2P'
+  font-family: 'Press Start 2P';
+  text-shadow: 10px 10px rgb(213, 212, 212);
 }
 
 .about-me {
@@ -27,6 +28,8 @@
   font-size: 50px;
   font-family: 'Press Start 2P';
   text-align: center;
+  text-shadow: 10px 10px rgb(213, 212, 212);
+
 }
 
 #my-head {
