@@ -10,7 +10,7 @@
 }
 
 .thats-me {
-  margin-top: -450px;
+  margin-top: -480px;
   margin-left: 60%;
   transform: translateX(300%);
   animation: come-in 6.5s ease forwards;
@@ -21,11 +21,75 @@
   font-family: 'Press Start 2P'
 }
 
+.about-me {
+  margin-top: 300px;
+  margin-bottom: 200px;
+  font-size: 50px;
+  font-family: 'Press Start 2P';
+  text-align: center;
+}
+
 #my-head {
   width: 1400%;
   margin-left: -400px;
   margin-top: -360px;
 }
+
+* {
+  box-sizing:border-box;
+}
+
+.pixel {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  float: left;
+  margin: 0 0.625em;
+  outline: solid 0.25em #000;
+  box-shadow: inset .313em .313em 0 rgba(0,0,0,0.4), inset -.313em -.313em 0 rgba(255,255,255,0.4), 0 1em 0.625em -.4em rgba(0,0,0,0.8);
+  transition: linear .2s;
+}
+
+.pixel:hover {
+  box-shadow: inset .313em .313em 0 rgba(0,0,0,0.8), inset -.313em -.313em 0 rgba(255,255,255,0.6), 0 1em 0.625em -.4em rgba(255,255,255,0.8);
+}
+
+.pixel:before {
+   content: " ";
+   position: absolute;
+  top: -.25em;
+  left: -.25em;
+  width: .625em;
+  height: .625em;
+  background: #1b1b1b;
+  border-bottom: solid .25em #000;
+  border-right: solid .25em #000;
+  box-shadow: .25em .25em 0 #FFF, .1em .9em 0 -.2em #FFF, 0.9em 0.1em 0 -.2em #FFF;
+}
+
+.pixel:after {
+   content: " ";
+   position: absolute;
+  bottom: -.25em;
+  right: -.25em;
+  width: .625em;
+  height: .625em;
+  background: #1b1b1b;
+  border-top: solid .25em #000;
+  border-left: solid .25em #000;
+ box-shadow: -.25em -.25em 0 #FFF, -.1em -.9em 0 -.2em #FFF, -0.9em -0.1em 0 -.2em #FFF;
+}
+
+.github {
+  margin-top: -100px;
+  background: #58cdff;
+  padding: 2.2em 0 0 1.2em;
+  margin-bottom: 100px;
+  margin-left: 43%;
+  text-decoration: none;
+  font-family: 'Press Start 2P';
+}
+
 
 @keyframes come-in {
   to { transform: translateX(0); }
