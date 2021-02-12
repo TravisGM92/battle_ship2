@@ -6,7 +6,19 @@
   overflow: hidden;
   margin-left: 35%;
   transform: translateX(-300%);
-  animation: come-in 2.75s ease forwards;
+  animation: come-in 2.85s ease forwards;
+}
+
+.thats-me {
+  margin-top: -200px;
+  margin-left: 55%;
+  transform: translateX(300%);
+  animation: come-in 6.5s ease forwards;
+}
+
+.thats-me p {
+  font-size: 70px;
+  font-family: 'Press Start 2P'
 }
 
 #my-head {
