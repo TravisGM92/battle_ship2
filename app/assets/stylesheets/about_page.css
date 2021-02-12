@@ -11,13 +11,13 @@
 
 .thats-me {
   margin-top: -200px;
-  margin-left: 55%;
+  margin-left: 60%;
   transform: translateX(300%);
   animation: come-in 6.5s ease forwards;
 }
 
 .thats-me p {
-  font-size: 70px;
+  font-size: 65px;
   font-family: 'Press Start 2P'
 }
 
