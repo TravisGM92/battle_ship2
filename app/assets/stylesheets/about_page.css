@@ -1,13 +1,12 @@
 .pixel-me {
   width: 260px;
-  height: 400px;
+  height: 310px;
   border: solid 1px;
   overflow: hidden;
 }
 
 #my-head {
-  width: 1100%;
-  margin-left: -260px;
-  margin-top: -200px;
-  /* width: 160%; */
+  width: 1400%;
+  margin-left: -400px;
+  margin-top: -360px;
 }
