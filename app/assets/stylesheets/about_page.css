@@ -1,0 +1,11 @@
+.pixel-me {
+  width: 165px;
+  height: 160px;
+  overflow: hidden;
+}
+
+#my-head {
+  margin-top: -165px;
+  margin-left: -150px;
+  width: 1800px;
+}
