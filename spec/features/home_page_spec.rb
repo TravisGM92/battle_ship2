@@ -8,5 +8,6 @@ RSpec.describe 'Home page' do
     expect(page).to have_button('Play!')
     expect(page).to have_button('Da Rulez')
     expect(page).to have_link('About')
+    expect(page).to have_css('#army-tank-gif')
   end
 end

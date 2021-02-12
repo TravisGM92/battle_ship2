@@ -43,7 +43,7 @@
     margin-left: 125px;
     margin-top: 100px;
     width: 75%;
-    height: 60%;
+    height: 55%;
     position: absolute;
     z-index: 999;
     color: white;
@@ -92,5 +92,11 @@
   @keyframes blink {
     from { color: green }
     to { color: rgba(0, 111, 41, 0.2) }
+  }
+
+  #army-tank-gif {
+    margin-top: -50px;
+    width: 315px;
+    margin-left: 29%;
   }
 }
