@@ -11,3 +11,12 @@ RSpec.describe 'Play game' do
     end
   end
 end
+
+RSpec.describe 'Play game page' do
+  describe 'content' do
+    it 'has a field to input ones name' do
+      visit('/game')
+      expect(page).to have_field(:users_name)
+    end
+  end
+end

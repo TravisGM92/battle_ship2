@@ -20,4 +20,14 @@ $(document).ready(function( $ ) {
   AOS.init({
     easing: 'ease-in-quad',
   });
-})
+});
+
+$(document).ready(function( $ ) {
+  $(".but").click (function(){
+    // Close all open windows
+    $(".content").stop().slideUp(100);
+    $(".rules").toggle("slow")
+    // Toggle this window open/close
+    $(this).next(".content").stop().slideToggle(100);
+  });
+});
