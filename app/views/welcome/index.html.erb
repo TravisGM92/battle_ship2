@@ -12,11 +12,13 @@
         <p>Time to play</p>
         <p>BattleShip!</p>
         <div class="play-game">
-          <button type="submit" id="play-button" class="but"><p>Play<b class="exclaim">!</b></p></button>
+          <button type="text" id="play-button" class="but"><p>Play<b class="exclaim">!</b></p></button>
+          <!-- <br> -->
             <div class="content">
-              <form class="user-name" action="/user" method="post">
-                <input type="text" placeholder="Give us your name" id="user_name" required><br>
-                <button type="submit"></button>
+              <form class="user-name" action="/game" method="post">
+                <input type="text" name="user_name" placeholder="Give us your name" id="user_name" required><br>
+                <button type="submit" id="submit-button">Let's play</button>
+                <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
               </form>
             </div>
         </div>
