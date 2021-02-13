@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/game', to: 'game#index'
   get '/rules', to: 'game#show'
   get '/about', to: 'game#about'
+  post '/user', to: 'user#new'
 end

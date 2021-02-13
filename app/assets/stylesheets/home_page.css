@@ -89,6 +89,28 @@
     animation-iteration-count: infinite;
   }
 
+ .content {
+    margin-top:-10px;
+    background-color: black;
+    width: 200px;
+    height: 0px;
+    position: absolute;
+    border-radius: 5px;
+    display: none;
+    margin-left: 10px;
+    margin-bottom: -200px;
+ }
+
+input[type="text"] {
+  position: absolute;
+  border: solid black 2px;
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 6px;
+ }
+
+
   @keyframes blink {
     from { color: green }
     to { color: rgba(0, 111, 41, 0.2) }
