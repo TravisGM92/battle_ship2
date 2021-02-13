@@ -106,7 +106,7 @@
  }
 
  #user_name {
-   margin-left: -75px;
+   margin-left: -40px;
    margin-top: 240px;
    height: 100px;
    width: 380px;
@@ -123,7 +123,7 @@ input[type="text"] {
  }
 
  #submit-button {
-   width: 300px;
+   width: 320px;
    height: 80px;
    font-size: 50px;
  }
