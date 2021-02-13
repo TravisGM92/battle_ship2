@@ -102,11 +102,11 @@
  .user-name {
    height: 0px;
    margin-top: -230px;
-   margin-left: 20px;
+   margin-left: 0px;
  }
 
  #user_name {
-   margin-left: -70px;
+   margin-left: -80px;
    margin-top: 240px;
    height: 100px;
    width: 380px;
@@ -123,7 +123,7 @@ input[type="text"] {
  }
 
  #submit-button {
-   width: 260px;
+   width: 280px;
    height: 80px;
    font-size: 50px;
  }
