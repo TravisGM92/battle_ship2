@@ -101,30 +101,31 @@
 
  .user-name {
    height: 0px;
-   margin-top: -280px;
-   margin-left: 10px;
+   margin-top: -230px;
+   margin-left: 20px;
  }
 
  #user_name {
-   margin-left: -40px;
-   margin-top: 270px;
+   margin-left: -70px;
+   margin-top: 240px;
    height: 100px;
-   width: 280px;
+   width: 380px;
  }
 
 input[type="text"] {
-  margin-top: 380px;
+  margin-top: 400px;
   position: absolute;
   border: solid black 2px;
-  width: 200px;
+  width: 500px;
   height: 50px;
   font-size: 40px;
   border-radius: 6px;
  }
 
  #submit-button {
-   width: 190px;
-   height: 40px;
+   width: 240px;
+   height: 80px;
+   font-size: 50px;
  }
 
 
