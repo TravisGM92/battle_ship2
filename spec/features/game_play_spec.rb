@@ -4,19 +4,29 @@ require 'rails_helper'
 
 RSpec.describe 'Play game' do
   describe 'Play! button' do
-    it 'when clicked redirects to game play screen' do
+    it 'when clicked opens field for user name input and a button' do
       visit('/')
       click_button('Play!')
-      expect(current_path).to eq('/game')
+      expect(page).to have_css('#user_name')
+      expect(page).to have_button('submit-button')
     end
   end
 end
 
 RSpec.describe 'Play game page' do
-  describe 'content' do
-    it 'has a field to input ones name' do
-      visit('/game')
-      expect(page).to have_field(:users_name)
+  describe 'lets play button' do
+    it 'once clicked redirects to /game if name is input' do
+      visit('/')
+      click_button('Play!')
+      fill_in :user_name, with: 'George'
+      click_button('submit-button')
+      expect(current_path).to eq('/game')
     end
+    # it 'if no name input and button is clicked, no redirection happens' do
+    #   visit('/')
+    #   click_button('Play!')
+    #   click_button('submit-button')
+    #   expect(current_path).to eq('/')
+    # end
   end
 end
