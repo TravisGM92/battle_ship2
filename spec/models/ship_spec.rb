@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Ship, type: :model do
@@ -7,6 +9,6 @@ RSpec.describe Ship, type: :model do
   describe 'relationships' do
     it { should belong_to :user }
     it { should belong_to :board }
-    it { should have_many(:cells).through(:board) }
+    it { should have_many :cells }
   end
 end

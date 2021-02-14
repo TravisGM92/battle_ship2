@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
 class GameController < ApplicationController
-  def index #creates first user
+  # creates first user
+  def index
     @user = User.find_or_create_by(name: params['user_name'])
   end
 
-  def show #rules
+  # rules
+  def show
     # require "pry"; binding.pry
   end
 
