@@ -6,6 +6,15 @@
   </head>
   <body>
     <body class="game-play">
-
+      <div class="test_content">
+        <form class="test-form" action="/game" method="put">
+          <input type="text" name="user_name" placeholder="Give us your name" id="user_name" required><br>
+          <input type="submit" class="test_button"></input>
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        </form>
+      </div>
+      <div id="game">
+        <%=@user%>
+      </div>
   </body>
 </html>

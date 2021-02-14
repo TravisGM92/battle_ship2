@@ -15,18 +15,12 @@ end
 
 RSpec.describe 'Play game page' do
   describe 'lets play button' do
-    it 'once clicked redirects to /game if name is input' do
+    it 'once clicked redirects to /game' do
       visit('/')
       click_button('Play!')
       fill_in :user_name, with: 'George'
       click_button('submit-button')
       expect(current_path).to eq('/game')
     end
-    # it 'if no name input and button is clicked, no redirection happens' do
-    #   visit('/')
-    #   click_button('Play!')
-    #   click_button('submit-button')
-    #   expect(current_path).to eq('/')
-    # end
   end
 end

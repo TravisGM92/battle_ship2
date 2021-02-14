@@ -31,3 +31,23 @@ $(document).ready(function( $ ) {
     $(this).next(".content").stop().slideToggle(100);
   });
 });
+
+$(document).ready(function ( $ ) {
+  $(".test_button").click(function() {
+      $("#test").text($("#user_name").val());
+  });
+});
+
+$(document).ready(function ( $ ) {
+  $(".test_button").click(function() {
+      $.ajax({
+          type: "POST",
+          url: "http://localhost:3000/test",
+          data: {"user_name": $("#user_name").val()},
+          success: function(result) {
+              $("#test").html(result);
+          }
+      });
+    $("#game").load(location.href + " #game");
+  });
+});

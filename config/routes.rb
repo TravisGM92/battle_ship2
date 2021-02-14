@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/game', to: 'game#index'
   get '/rules', to: 'game#show'
   get '/about', to: 'game#about'
-  post '/game', to: 'game#create'
+  post '/test', to: 'game#show'
 end
