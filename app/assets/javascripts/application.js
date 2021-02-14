@@ -41,13 +41,13 @@ $(document).ready(function ( $ ) {
 $(document).ready(function ( $ ) {
   $(".test_button").click(function() {
       $.ajax({
-          type: "POST",
-          url: "http://localhost:3000/test",
+          type: "GET",
+          url: "http://localhost:3000/game",
           data: {"user_name": $("#user_name").val()},
           success: function(result) {
               $("#test").html(result);
           }
       });
-    $("#game").load(location.href + " #game");
+    $("#game").load(location.href + " #game"); //updates the #game div. Can update <p> as well
   });
 });
