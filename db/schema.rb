@@ -10,13 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_014737) do
+ActiveRecord::Schema.define(version: 2021_02_14_183422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: :cascade do |t|
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_boards_on_user_id"
+  end
+
+  create_table "cells", force: :cascade do |t|
+    t.string "coordinate"
+    t.bigint "board_id"
+    t.index ["board_id"], name: "index_cells_on_board_id"
+  end
+
+  create_table "ships", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.bigint "board_id"
+    t.index ["board_id"], name: "index_ships_on_board_id"
+    t.index ["user_id"], name: "index_ships_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
   end
 
+  add_foreign_key "boards", "users"
+  add_foreign_key "cells", "boards"
+  add_foreign_key "ships", "boards"
+  add_foreign_key "ships", "users"
 end
