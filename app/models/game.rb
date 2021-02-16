@@ -15,6 +15,6 @@ class Game < ApplicationRecord
     Ship.create_ships(data)
     Cell.create_cells(data[:board_size], data[:user_name])
     Board.place_human_ships(data)
-    Board.place_computer_ships
+    Board.place_computer_ships(data)
   end
 end

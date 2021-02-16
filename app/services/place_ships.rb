@@ -1,9 +1,9 @@
 class PlaceShips
 
-  def self.find_coordinates_for_ships
+  def self.find_coordinates_for_ships(board_size)
     computer = User.find_by(name: 'COMPUTER')
     computer.ships.each do |ship|
-      coords = GetCoordinates.new({user: computer, ship: ship})
+      coords = GetCoordinates.new({user: computer, ship: ship, board_size: board_size})
       assign_coordinates({coords: coords.get_coordinates, ship: ship, user: computer})
     end
   end
