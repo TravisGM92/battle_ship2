@@ -14,7 +14,8 @@ class Board < ApplicationRecord
     data[:ships].each do |ship|
       the_ship = Ship.find_by(name: ship[:name])
       ship[:coordinates].each do |coord|
-        the_ship.cells.create!(coordinate: coord.downcase, board_id: User.find_by(name: data[:user_name]).board.id, state: 'ship')
+        the_ship.cells.create!(coordinate: coord.downcase, board_id: User.find_by(name: data[:user_name]).board.id,
+                               state: 'ship')
         cell = Cell.find_by(coordinate: coord.downcase)
         cell.state = 'ship'
         cell.ship_id = the_ship.id
@@ -28,9 +29,9 @@ class Board < ApplicationRecord
 
   def self.create_ships(human_board, computer_board, human_ships)
     Ship.create_ships({
-      human_board: human_board,
-      computer_board: computer_board,
-      human_ships: human_ships
-      })
+                        human_board: human_board,
+                        computer_board: computer_board,
+                        human_ships: human_ships
+                      })
   end
 end

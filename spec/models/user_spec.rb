@@ -34,7 +34,7 @@ RSpec.describe User, type: :model do
     it 'ship can have cells' do
       board = Board.create!(user_id: @user.id)
       3.times do |i|
-        board.cells.create!(coordinate: "A#{i+1}")
+        board.cells.create!(coordinate: "A#{i + 1}")
       end
       ship1 = Ship.create!(user_id: @user.id, board_id: board.id, name: 'Twayla', health: 3)
       ship1.cells.create!(board_id: board.id, coordinate: 'A1')

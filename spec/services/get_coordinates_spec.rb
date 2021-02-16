@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe GetCoordinates, type: :model do
@@ -33,11 +35,12 @@ RSpec.describe GetCoordinates, type: :model do
       end
       coordinates = coords.flatten.compact
       coordinates.each_with_index do |coordinate, index|
-        break if coordinates[index+1].nil?
-        if coordinate[0] == coordinates[index+1][0]
-          expect(coordinate[1].to_i).to_not eq(coordinates[index+1][1])
+        break if coordinates[index + 1].nil?
+
+        if coordinate[0] == coordinates[index + 1][0]
+          expect(coordinate[1].to_i).to_not eq(coordinates[index + 1][1])
         else
-          expect(coordinate[0]).to_not eq(coordinates[index+1][0])
+          expect(coordinate[0]).to_not eq(coordinates[index + 1][0])
         end
       end
     end
@@ -126,10 +129,9 @@ RSpec.describe GetCoordinates, type: :model do
 
       x.each_with_index do |coord, index|
         @gc.alpha.each_with_index do |letter, index2|
-          break if x[index+1].nil?
-          if coord == letter
-            expect(x[index+1]).to eq(@gc.alpha[index2+1])
-          end
+          break if x[index + 1].nil?
+
+          expect(x[index + 1]).to eq(@gc.alpha[index2 + 1]) if coord == letter
         end
       end
     end
@@ -138,7 +140,7 @@ RSpec.describe GetCoordinates, type: :model do
       @gc.first_coord = 'a1'
       result = @gc.get_right_coords(@gc.alpha.index(@gc.first_coord[0]))
       expect(result).to be_an(Array)
-      result.each_with_index do |coord, index|
+      result.each_with_index do |coord, _index|
         expect(coord).to be_a(String)
       end
       expect(result[0][0]).to eq('b')

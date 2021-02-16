@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class Game < ApplicationRecord
   has_many :turns
   has_many :users, through: :turns
 
   def create_turns(data)
-    turn = self.turns.create!(turn_number: 0, player_to_move: data[:player_to_move])
+    turn = turns.create!(turn_number: 0, player_to_move: data[:player_to_move])
     create_game(data, turn)
   end
 
