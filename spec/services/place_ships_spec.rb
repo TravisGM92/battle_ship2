@@ -8,11 +8,11 @@ RSpec.describe 'PlaceShips', type: :model do
       user = User.create!(name: 'COMPUTER')
       board = Board.create!(user_id: user.id)
       3.times do |i|
-        board.cells.create!(coordinate: "a#{i+1}")
+        board.cells.create!(coordinate: "a#{i + 1}")
       end
       ship = user.ships.create!(name: 'Lila', health: 3, board_id: user.board.id)
       @data = {
-        coords: ['a1', 'a2', 'a3'],
+        coords: %w[a1 a2 a3],
         ship: ship,
         user: user
       }

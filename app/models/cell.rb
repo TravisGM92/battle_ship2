@@ -4,9 +4,8 @@ class Cell < ApplicationRecord
   validates_presence_of :coordinate
   belongs_to :board
 
-  def self.create_cells(size, _human_name)
-    letters = ('a'..'z').to_a
-    x_axis = letters[0..(size.split('X')[0].to_i - 1)]
+  def self.create_cells(size)
+    x_axis = ('a'..'z').to_a[0..(size.split('X')[0].to_i - 1)]
     y_axis = (1..(size.split('X')[1].to_i)).to_a
     x_axis.each do |x|
       y_axis.each do |y|

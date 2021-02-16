@@ -7,9 +7,10 @@ class Ship < ApplicationRecord
   has_many :cells
 
   def self.create_ships(data)
+    user = User.find_by(name: data[:user_name])
     data[:ships].each do |ship|
       Ship.create!(name: ship[:name], health: ship[:coordinates].length,
-                   user_id: User.find_by(name: data[:user_name]).id, board_id: User.find_by(name: data[:user_name]).board.id)
+                   user_id: user.id, board_id: user.board.id)
     end
     create_computer_ships(data[:ships].length)
   end

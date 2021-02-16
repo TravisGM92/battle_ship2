@@ -13,7 +13,7 @@ class Game < ApplicationRecord
     User.create_players(data, turn)
     Board.create_boards(data)
     Ship.create_ships(data)
-    Cell.create_cells(data[:board_size], data[:user_name])
+    Cell.create_cells(data[:board_size])
     Board.place_human_ships(data)
     Board.place_computer_ships(data)
   end

@@ -3,7 +3,7 @@
 class GetCoordinates
   attr_accessor :first_coord
   attr_reader :alpha, :ship
-  attr_writer :first_coord, :board_size
+  attr_writer :board_size
 
   def initialize(data)
     @computer_user = data[:user]
@@ -13,23 +13,23 @@ class GetCoordinates
     @board_size = data[:board_size]
   end
 
-  def get_coordinates
-    @first_coord = get_first_coordinate
-    [@first_coord, get_next_coordinates]
+  def find_coordinates
+    @first_coord = find_first_coordinate
+    [@first_coord, find_next_coordinates]
   end
 
-  def get_first_coordinate
+  def find_first_coordinate
     results = @board.cells.map { |cell| cell.coordinate if cell.state == 'empty' && cell.ship_id.nil? }
     results.shuffle.pop
   end
 
-  def get_next_coordinates
+  def find_next_coordinates
     if @ship.health == 1
       nil
     elsif fits_vert? && fits_horz?
-      [0..1].shuffle.pop == 0 ? get_vertical_coords : get_horizontal_coords
+      [0..1].shuffle.pop == 0 ? vertical_coords : horizontal_coords
     else
-      fits_vert? ? get_vertical_coords : get_horizontal_coords
+      fits_vert? ? vertical_coords : horizontal_coords
     end
   end
 
@@ -43,15 +43,15 @@ class GetCoordinates
     (x + @ship.health <= @board_size.split('X')[0].to_i)
   end
 
-  def get_vertical_coords
+  def vertical_coords
     if (@first_coord[1..-1].to_i - @ship.health).negative?
-      get_upper_coords
+      upper_coords
     else
-      get_lower_coords
+      lower_coords
     end
   end
 
-  def get_upper_coords
+  def upper_coords
     results = []
     index = @first_coord[1..-1].to_i
     (@ship.health - 1).times do
@@ -61,7 +61,7 @@ class GetCoordinates
     results
   end
 
-  def get_lower_coords
+  def lower_coords
     results = []
     index = @first_coord[1..-1].to_i
     (@ship.health - 1).times do
@@ -71,15 +71,15 @@ class GetCoordinates
     results
   end
 
-  def get_horizontal_coords
+  def horizontal_coords
     if (@alpha.index(@first_coord[0]) - @ship.health).positive?
-      get_left_coords(@alpha.index(@first_coord[0]))
+      left_coords(@alpha.index(@first_coord[0]))
     else
-      get_right_coords(@alpha.index(@first_coord[0]))
+      right_coords(@alpha.index(@first_coord[0]))
     end
   end
 
-  def get_left_coords(index)
+  def left_coords(index)
     results = []
     (@ship.health - 1).times do
       results << @alpha[index - 1] + (@first_coord[1..-1]).to_s
@@ -88,7 +88,7 @@ class GetCoordinates
     results
   end
 
-  def get_right_coords(index)
+  def right_coords(index)
     results = []
     (@ship.health - 1).times do
       results << @alpha[index + 1] + (@first_coord[1..-1]).to_s
