@@ -23,7 +23,7 @@ class Board < ApplicationRecord
   end
 
   def self.place_computer_ships
-    PlaceShips.computer_board
+    PlaceShips.find_coordinates_for_ships
   end
 
   def self.create_ships(human_board, computer_board, human_ships)

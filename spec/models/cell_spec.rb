@@ -21,3 +21,11 @@ RSpec.describe Cell, type: :model do
     end
   end
 end
+
+RSpec.describe Cell, type: :model do
+  describe 'methods' do
+    it '.create_cells' do
+
+    end
+  end
+end

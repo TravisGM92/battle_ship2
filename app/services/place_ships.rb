@@ -1,13 +1,13 @@
 class PlaceShips
 
-  def self.computer_board
+  def self.find_coordinates_for_ships
     computer = User.find_by(name: 'COMPUTER')
     computer.ships.each do |ship|
       coords = GetCoordinates.new({user: computer, ship: ship})
       assign_coordinates({coords: coords.get_coordinates, ship: ship, user: computer})
     end
   end
-  
+
   def self.assign_coordinates(data)
     coords = data[:coords].flatten.compact
     coords.each do |coord|
