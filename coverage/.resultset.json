@@ -9,106 +9,6 @@
           null
         ]
       },
-      "/Users/travisgm/personal_project/battle_ship/app/services/get_coordinates.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          7,
-          7,
-          7,
-          7,
-          null,
-          null,
-          1,
-          3,
-          3,
-          null,
-          null,
-          1,
-          1044,
-          4,
-          null,
-          null,
-          1,
-          3,
-          null,
-          null,
-          3,
-          3,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null,
-          1,
-          4,
-          4,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          3,
-          2,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          3,
-          3,
-          6,
-          6,
-          null,
-          3,
-          null,
-          null,
-          1,
-          1,
-          1,
-          2,
-          2,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/travisgm/personal_project/battle_ship/app/models/user.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/travisgm/personal_project/battle_ship/app/models/application_record.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/travisgm/personal_project/battle_ship/app/models/board.rb": {
         "lines": [
           null,
@@ -149,29 +49,12 @@
           null
         ]
       },
-      "/Users/travisgm/personal_project/battle_ship/app/models/ship.rb": {
+      "/Users/travisgm/personal_project/battle_ship/app/models/application_record.rb": {
         "lines": [
           null,
           null,
           1,
           1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
           null
         ]
       },
@@ -200,82 +83,215 @@
       },
       "/Users/travisgm/personal_project/battle_ship/app/models/game.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
           0,
           0,
           0,
           null,
-          0,
-          0,
+          null
+        ]
+      },
+      "/Users/travisgm/personal_project/battle_ship/app/models/ship.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
           0,
           0,
           null,
           0,
+          null,
+          null,
+          1,
           0,
           0,
           0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null,
+          null
+        ]
       },
       "/Users/travisgm/personal_project/battle_ship/app/models/turn.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
       },
-      "/Users/travisgm/personal_project/battle_ship/app/controllers/application_controller.rb": {
+      "/Users/travisgm/personal_project/battle_ship/app/models/user.rb": {
         "lines": [
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
           0,
-          0
-        ],
-        "branches": {
-        }
+          0,
+          null,
+          null
+        ]
       },
-      "/Users/travisgm/personal_project/battle_ship/app/controllers/welcome_controller.rb": {
+      "/Users/travisgm/personal_project/battle_ship/app/services/get_coordinates.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          19,
+          19,
+          19,
+          19,
+          19,
           null,
           null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          783,
+          3,
+          null,
+          null,
+          1,
+          3,
+          null,
+          null,
+          3,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          8,
+          8,
+          null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          3,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          null,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          4,
+          4,
+          null,
+          2,
+          null,
+          null,
+          1,
+          4,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          1,
+          3,
+          3,
+          6,
+          6,
+          null,
+          3,
+          null,
+          null,
+          1,
+          3,
+          3,
+          6,
+          6,
+          null,
+          3,
+          null,
+          null
+        ]
       },
       "/Users/travisgm/personal_project/battle_ship/app/controllers/game_controller.rb": {
         "lines": [
           null,
           null,
-          0,
+          1,
           null,
-          0,
-          0,
-          0,
+          1,
+          1,
           null,
           null,
-          0,
           null,
-          0,
+          1,
           null,
-          0,
           null,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/travisgm/personal_project/battle_ship/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/travisgm/personal_project/battle_ship/app/controllers/welcome_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
       },
       "/Users/travisgm/personal_project/battle_ship/app/services/place_ships.rb": {
         "lines": [
@@ -305,6 +321,6 @@
         }
       }
     },
-    "timestamp": 1613445128
+    "timestamp": 1613503784
   }
 }

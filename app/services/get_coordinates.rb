@@ -1,10 +1,12 @@
 class GetCoordinates
-  attr_reader :first_coord, :alpha
+  attr_reader :first_coord, :alpha, :ship, :board_size
+  attr_writer :first_coord, :board_size
   def initialize(data)
     @computer_user = data[:user]
     @ship = data[:ship]
     @board = data[:user].board
     @alpha = ('a'..'z').to_a
+    @board_size = data[:board_size]
   end
 
   def get_coordinates
@@ -30,17 +32,41 @@ class GetCoordinates
   end
 
   def fits_vert?
-    y = @first_coord[-1].to_i
-    (y + @ship.health <= 10) || (y - @ship.health > 0)
+    y = @first_coord[-1].to_i - 1
+    (y + @ship.health <= @board_size.split('X')[1].to_i)
   end
 
   def fits_horz?
-    x = @first_coord[0]
-    (@alpha.index(x) + @ship.health <= 25) || (@alpha.index(x) - @ship.health > 0)
+    x = @alpha.index(@first_coord[0])
+    (x + @ship.health <= @board_size.split('X')[0].to_i)
   end
 
   def get_vertical_coords
-    require "pry"; binding.pry
+    if @first_coord[1..-1].to_i - @ship.health < 0
+      self.get_upper_coords
+    else
+      self.get_lower_coords
+    end
+  end
+
+  def get_upper_coords
+    results = []
+    index = @first_coord[1..-1].to_i
+    (@ship.health - 1).times do
+      results << "#{@first_coord[0]}" + "#{index + 1}"
+      index += 1
+    end
+    results
+  end
+
+  def get_lower_coords
+    results = []
+    index = @first_coord[1..-1].to_i
+    (@ship.health - 1).times do
+      results << "#{@first_coord[0]}" + "#{index - 1}"
+      index -= 1
+    end
+    results
   end
 
   def get_horizontal_coords
