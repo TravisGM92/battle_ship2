@@ -26,7 +26,7 @@ RSpec.describe 'PlaceShips', type: :model do
     end
 
     it '.find_coordinates_for_ships' do
-
+      require "pry"; binding.pry
     end
   end
 end
