@@ -1,5 +1,5 @@
 class GetCoordinates
-
+  attr_reader :first_coord, :alpha
   def initialize(data)
     @computer_user = data[:user]
     @ship = data[:ship]
