@@ -8,7 +8,7 @@ RSpec.describe 'Play game' do
       visit('/')
       click_button('Play!')
       expect(page).to have_css('#user_name')
-      expect(page).to have_button('submit-button')
+      expect(page).to have_button("Let's play")
     end
   end
 end
@@ -19,7 +19,7 @@ RSpec.describe 'Play game page' do
       visit('/')
       click_button('Play!')
       fill_in :user_name, with: 'George'
-      click_button('submit-button')
+      click_button("Let's play")
       expect(current_path).to eq('/game')
     end
   end
