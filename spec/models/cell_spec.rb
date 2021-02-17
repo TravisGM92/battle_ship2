@@ -25,6 +25,15 @@ end
 RSpec.describe Cell, type: :model do
   describe 'methods' do
     it '.create_cells' do
+      user = User.create!(name: 'George')
+      Board.create!(user_id: user.id)
+      expect(user.board.cells).to be_empty
+      Cell.create_cells('10X10')
+      expect(user.board.cells).to_not be_empty
+      user.board.cells.each do |cell|
+        expect(cell.state).to eq('empty')
+        expect(cell.board_id).to eq(user.board.id)
+      end
     end
   end
 end

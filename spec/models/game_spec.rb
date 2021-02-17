@@ -10,8 +10,8 @@ RSpec.describe Game, type: :model do
 end
 
 RSpec.describe Game, type: :model do
-  describe 'integration' do
-    it 'upon initialization with username and ship placements, creates 2 boards with cells and ships' do
+  describe 'methods' do
+    it '.create_turns()' do
       # game_data = {
       #   user_name: 'George',
       #   ships: [{name: 'Lilac', coordinates: ['A1', 'A2']}, {name: 'Dudeness', coordinates: ['B1', 'B2']}],
@@ -21,7 +21,6 @@ RSpec.describe Game, type: :model do
       # }
       # game = Game.create!
       # game.create_turns(game_data)
-      # expect(game).to be_a(Game)
       # game.turns.each do |turn|
       #   expect(turn).to be_a(Turn)
       # end
