@@ -7,8 +7,10 @@ class Ship < ApplicationRecord
   has_many :cells
 
   def self.create_ships(data)
+    user = User.find_by(name: data[:user_name])
     data[:ships].each do |ship|
-     Ship.create!(name: ship[:name], health: ship[:coordinates].length, user_id: User.find_by(name: data[:user_name]).id, board_id: User.find_by(name: data[:user_name]).board.id)
+      Ship.create!(name: ship[:name], health: ship[:coordinates].length,
+                   user_id: user.id, board_id: user.board.id)
     end
     create_computer_ships(data[:ships].length)
   end
@@ -16,7 +18,8 @@ class Ship < ApplicationRecord
   def self.create_computer_ships(number_of_ships)
     options = (1..5).to_a.shuffle
     number_of_ships.times do
-      Ship.create!(name: Faker::Name.first_name, health: options.pop, board_id: User.find_by(name: 'COMPUTER').board.id, user_id: User.find_by(name: 'COMPUTER').id)
+      Ship.create!(name: Faker::Name.first_name, health: options.pop,
+                   board_id: User.find_by(name: 'COMPUTER').board.id, user_id: User.find_by(name: 'COMPUTER').id)
     end
   end
 end

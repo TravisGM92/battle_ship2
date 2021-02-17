@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Turn < ApplicationRecord
   has_many :users
   belongs_to :game
