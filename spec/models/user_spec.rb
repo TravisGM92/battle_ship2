@@ -47,3 +47,18 @@ RSpec.describe User, type: :model do
     end
   end
 end
+
+RSpec.describe User, type: :model do
+  describe 'methods' do
+    it '.create_players()' do
+      User.delete_all
+      game = Game.create!
+      turn = game.turns.create!(turn_number: 0, player_to_move: 'COMPUTER')
+      data = {user_name: 'Dudeness'}
+      expect(User.all).to be_empty
+      User.create_players(data, turn)
+      expect(User.all).to_not be_empty
+      expect(User.first.name).to eq(data[:user_name])
+    end
+  end
+end
