@@ -24,7 +24,7 @@ RSpec.describe Ship, type: :model do
       expect(Ship.all).to be_empty
       game_data = {
         user_name: user.name,
-        ships: [{name: 'Lilac', coordinates: ['A1', 'A2']}, {name: 'Dudeness', coordinates: ['B1', 'B2']}],
+        ships: [{ name: 'Lilac', coordinates: %w[A1 A2] }, { name: 'Dudeness', coordinates: %w[B1 B2] }],
         player_to_move: 'George',
         board_size: '10X10',
         difficulty: 'easy'

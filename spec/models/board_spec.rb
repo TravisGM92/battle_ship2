@@ -12,7 +12,7 @@ end
 
 RSpec.describe Board, type: :model do
   describe 'methods' do
-      it '.create_boards()' do
+    it '.create_boards()' do
       User.create!(name: 'George')
       User.create!(name: 'COMPUTER')
       data = {
@@ -27,22 +27,22 @@ end
 
 RSpec.describe Board, type: :model do
   describe 'methods' do
-      it '.place_human_ships()' do
-        User.first.delete
-        User.first.delete
-        user = User.create!(name: 'George')
-        Board.create!(user_id: user.id)
-        user.ships.create!(name: 'Lila', health: 3, board_id: user.board.id)
-        data = {
-          user_name: 'George',
-          ships: [{name: 'Lila', coordinates: ['A1', 'A2', 'A3']}],
-          player_to_move: 'George',
-          board_size: '10X10',
-          difficulty: 'easy'
-        }
-        expect(user.ships.first.cells).to be_empty
-        Board.place_human_ships(data)
-        expect(user.ships.first.cells).to_not be_empty
+    it '.place_human_ships()' do
+      User.first.delete
+      User.first.delete
+      user = User.create!(name: 'George')
+      Board.create!(user_id: user.id)
+      user.ships.create!(name: 'Lila', health: 3, board_id: user.board.id)
+      data = {
+        user_name: 'George',
+        ships: [{ name: 'Lila', coordinates: %w[A1 A2 A3] }],
+        player_to_move: 'George',
+        board_size: '10X10',
+        difficulty: 'easy'
+      }
+      expect(user.ships.first.cells).to be_empty
+      Board.place_human_ships(data)
+      expect(user.ships.first.cells).to_not be_empty
     end
   end
 end
@@ -57,7 +57,7 @@ RSpec.describe Board, type: :model do
         board.cells.create!(coordinate: "a#{i + 1}")
       end
       ship = user.ships.create!(name: 'Lila', health: 3, board_id: user.board.id)
-      data = {board_size: '10X10'}
+      data = { board_size: '10X10' }
       result = Board.place_computer_ships(data)
       expect(result).to be_an(Array)
       result[0].cells.each do |cell|
