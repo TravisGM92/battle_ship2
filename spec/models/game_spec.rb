@@ -12,18 +12,19 @@ end
 RSpec.describe Game, type: :model do
   describe 'methods' do
     it '.create_turns()' do
-      # game_data = {
-      #   user_name: 'George',
-      #   ships: [{name: 'Lilac', coordinates: ['A1', 'A2']}, {name: 'Dudeness', coordinates: ['B1', 'B2']}],
-      #   player_to_move: 'George',
-      #   board_size: '10X10',
-      #   difficulty: 'easy'
-      # }
-      # game = Game.create!
-      # game.create_turns(game_data)
-      # game.turns.each do |turn|
-      #   expect(turn).to be_a(Turn)
-      # end
+      User.delete_all
+      game_data = {
+        user_name: 'George',
+        ships: [{name: 'Lilac', coordinates: ['A1', 'A2']}, {name: 'Dudeness', coordinates: ['B1', 'B2']}],
+        player_to_move: 'George',
+        board_size: '10X10',
+        difficulty: 'easy'
+      }
+      game = Game.create!
+      game.create_turns(game_data)
+      game.turns.each do |turn|
+        expect(turn).to be_a(Turn)
+      end
     end
   end
 end
