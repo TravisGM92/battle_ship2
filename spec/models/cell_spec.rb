@@ -25,6 +25,8 @@ end
 RSpec.describe Cell, type: :model do
   describe 'methods' do
     it '.create_cells' do
+      User.first.delete
+      User.first.delete
       user = User.create!(name: 'George')
       Board.create!(user_id: user.id)
       expect(user.board.cells).to be_empty

@@ -4,7 +4,9 @@ require 'rails_helper'
 
 RSpec.describe 'PlaceShips', type: :model do
   describe 'methods' do
-    before(:each) do
+    it '.assign_coordinates' do
+      User.first.delete
+      User.first.delete
       user = User.create!(name: 'COMPUTER')
       board = Board.create!(user_id: user.id)
       3.times do |i|
@@ -16,8 +18,6 @@ RSpec.describe 'PlaceShips', type: :model do
         ship: ship,
         user: user
       }
-    end
-    it '.assign_coordinates' do
       cells = Cell.where(state: 'ship')
       expect(PlaceShips.assign_coordinates(@data)).to be_an(Array)
       expect(Cell.where(state: 'ship').count).to eq(3)
@@ -29,6 +29,19 @@ RSpec.describe 'PlaceShips', type: :model do
     end
 
     it '.find_coordinates_for_ships' do
+      User.first.delete
+      User.first.delete
+      user = User.create!(name: 'COMPUTER')
+      board = Board.create!(user_id: user.id)
+      3.times do |i|
+        board.cells.create!(coordinate: "a#{i + 1}")
+      end
+      ship = user.ships.create!(name: 'Lila', health: 3, board_id: user.board.id)
+      @data = {
+        coords: %w[a1 a2 a3],
+        ship: ship,
+        user: user
+      }
       size = '10X10'
       result = PlaceShips.find_coordinates_for_ships(size)
       expect(result).to be_an(Array)

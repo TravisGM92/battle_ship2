@@ -26,12 +26,4 @@ class Board < ApplicationRecord
   def self.place_computer_ships(data)
     PlaceShips.find_coordinates_for_ships(data[:board_size])
   end
-
-  def self.create_ships(human_board, computer_board, human_ships)
-    Ship.create_ships({
-                        human_board: human_board,
-                        computer_board: computer_board,
-                        human_ships: human_ships
-                      })
-  end
 end
