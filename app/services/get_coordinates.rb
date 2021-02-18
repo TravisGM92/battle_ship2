@@ -27,7 +27,7 @@ class GetCoordinates
     if @ship.health == 1
       nil
     elsif fits_vert? && fits_horz?
-      [0..1].shuffle.pop.zero? ? vertical_coords : horizontal_coords
+      [0..1].shuffle.pop == 0 ? vertical_coords : horizontal_coords
     else
       fits_vert? ? vertical_coords : horizontal_coords
     end
