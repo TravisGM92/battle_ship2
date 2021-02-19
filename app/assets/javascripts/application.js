@@ -51,3 +51,27 @@ $(document).ready(function ( $ ) {
     $("#game").load(location.href + " #game"); //updates the #game div. Can update <p> as well
   });
 });
+
+
+// the code below goes with the JS above.
+// It will update the #game div with the new name
+// inputted from the text field on the HTML page
+
+// <div class="test_content">
+//   <form class="test-form" action="/game" method="put">
+//     <input type="text" name="user_name" placeholder="Give us your name" id="user_name" required><br>
+//     <input type="submit" class="test_button"></input>
+//     <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+//   </form>
+// </div>
+// <div id="game">
+//   <%=@user.name%>
+// </div>
+
+
+window.onload = function () {
+            setTimeout(appeardiv,2100);
+        }
+        function appeardiv() {
+            document.getElementById('message1').style.display= "block";
+        }
