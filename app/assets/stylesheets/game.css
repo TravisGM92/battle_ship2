@@ -22,7 +22,7 @@
   	display: inline-block;
   }
 
-  .text1 p {
+  #message1 {
     margin-left: 20px;
     color: rgb(108, 246, 52);
     display: inline-block;
