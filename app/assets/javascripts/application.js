@@ -75,3 +75,16 @@ window.onload = function () {
         function appeardiv() {
             document.getElementById('message1').style.display= "block";
         }
+
+$(document).ready(function () {
+  setTimeout(function () {
+      $('#message1').fadeOut(1000);
+  }, 6200);
+});
+
+$(document).ready(function () {
+  setTimeout(function () {
+      $('.first1').fadeOut(2000);
+      $('.first2').fadeIn(2000);
+  }, 6300);
+});
