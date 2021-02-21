@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 1130px) {
 
-  .first {
+  .first1 {
     margin: auto;
     margin-top: 200px;
     width: 80%;
@@ -15,6 +15,13 @@
       0 0 30px rgb(80, 212, 26);
   	animation: expand 1.5s ease forwards;
     animation-delay: 1s;
+  }
+
+  .first2 {
+    margin: auto;
+    margin-top: 200px;
+    width: 80%;
+    height: 200px;
   }
 
   .text1 {
