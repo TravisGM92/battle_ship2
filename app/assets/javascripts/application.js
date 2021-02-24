@@ -76,15 +76,39 @@ window.onload = function () {
             document.getElementById('message1').style.display= "block";
         }
 
+// //       $('.active').click(function(){
+// //   $('#main').animate({opacity: 0}, 1100, function() {
+// //       $(this).load('blank.html', function() {
+// //           $(this).animate({opacity: 1}, 1100);
+// //       });
+// //   });
+// //   return false;
+// // });
+//
 $(document).ready(function () {
   setTimeout(function () {
-      $('#message1').fadeOut(1000);
+      $('#message1').animate({opacity: 0});
   }, 6200);
-});
-
-$(document).ready(function () {
   setTimeout(function () {
-      $('.first1').fadeOut(2000);
-      $('.first2').fadeIn(2000);
-  }, 6300);
+    $('.first1').animate({ opacity: 0 });
+  }, 6400);
+  setTimeout(function () {
+    $('.computer_board').animate({ opacity: 1 });
+  }, 7000);
+  setTimeout(function () {
+    $('.user_board').animate({ opacity: 1 });
+  }, 8800);
 });
+//
+// $(document).ready(function () {
+//   setTimeout(function () {
+//       $('.first1').fadeOut(2000);
+//       $('.space').fadeIn(2000);
+//   }, 6300);
+//   // setTimeout(function () {
+//   //   $('.space').fadeOut(2100);
+//   // }, 6400);
+//   setTimeout(function () {
+//     $('.computer_board').fadeIn(2100);
+//   }, 6400);
+// });

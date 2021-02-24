@@ -17,7 +17,7 @@
     animation-delay: 1s;
   }
 
-  .first2 {
+  .space {
     margin: auto;
     margin-top: 200px;
     width: 80%;
@@ -26,6 +26,34 @@
 
   .text1 {
   	display: inline-block;
+  }
+
+  .computer_board {
+    opacity: 0;
+    position: relative;
+    margin: auto;
+    margin-top: -720px;
+    width: 80%;
+    height: 300px;
+    border: 1px rgb(80, 212, 26) solid;
+    border-radius: 5px;
+    box-shadow:
+      inset 0 0 20px rgb(169, 255, 134),
+      0 0 30px rgb(80, 212, 26);
+  }
+
+  .user_board {
+    opacity: 0;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    height: 300px;
+    border: 1px rgb(80, 212, 26) solid;
+    border-radius: 5px;
+    box-shadow:
+      inset 0 0 20px rgb(169, 255, 134),
+      0 0 30px rgb(80, 212, 26);
   }
 
   #message1 {
