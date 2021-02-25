@@ -34,7 +34,7 @@
     margin: auto;
     margin-top: -720px;
     width: 85%;
-    height: 790px;
+    height: 760px;
     border: 1px rgb(80, 212, 26) solid;
     border-radius: 5px;
     box-shadow:
@@ -48,7 +48,7 @@
     margin: auto;
     margin-top: 80px;
     width: 85%;
-    height: 790px;
+    height: 760px;
     border: 1px rgb(80, 212, 26) solid;
     border-radius: 5px;
     box-shadow:
@@ -90,7 +90,7 @@
     font-family: 'Press Start 2P';
     font-size: 80px;
     text-align: center;
-    margin-top: 100%;
+    margin-top: 95%;
   }
 
   @keyframes typing {
