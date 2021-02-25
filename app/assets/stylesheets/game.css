@@ -34,7 +34,7 @@
     margin: auto;
     margin-top: -720px;
     width: 85%;
-    height: 800px;
+    height: 790px;
     border: 1px rgb(80, 212, 26) solid;
     border-radius: 5px;
     box-shadow:
@@ -48,7 +48,7 @@
     margin: auto;
     margin-top: 80px;
     width: 85%;
-    height: 800px;
+    height: 790px;
     border: 1px rgb(80, 212, 26) solid;
     border-radius: 5px;
     box-shadow:
@@ -88,7 +88,7 @@
     font-weight: 300;
     text-shadow: 3px 3px rgba(169, 255, 134, 0.4);
     font-family: 'Press Start 2P';
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     margin-top: 100%;
   }
