@@ -83,6 +83,15 @@
     display: none;
   }
 
+  #user_name_board {
+    color: rgb(108, 246, 52);
+    font-weight: 300;
+    text-shadow: 3px 3px rgba(169, 255, 134, 0.4);
+    font-family: 'Press Start 2P';
+    font-size: 150px;
+    text-align: center;
+  }
+
   @keyframes typing {
       from {
           width: 0%

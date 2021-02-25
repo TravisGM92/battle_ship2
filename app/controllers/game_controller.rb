@@ -4,6 +4,7 @@ class GameController < ApplicationController
   # creates first user
   def index
     @user = User.find_or_create_by(name: params['user_name'])
+    require "pry"; binding.pry
   end
 
   # rules
