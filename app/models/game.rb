@@ -17,4 +17,8 @@ class Game < ApplicationRecord
     Board.place_human_ships(data)
     Board.place_computer_ships(data)
   end
+
+  def self.format_data_to_start(data)
+    require "pry"; binding.pry
+  end
 end
