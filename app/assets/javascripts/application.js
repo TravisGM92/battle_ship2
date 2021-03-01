@@ -42,7 +42,7 @@ $(document).ready(function ( $ ) {
   $(".test_button").click(function() {
       $.ajax({
           type: "GET",
-          url: "http://localhost:3000/game",
+          url: "http://localhost:3000/test",
           data: {"user_name": $("#user_name").val()},
           success: function(result) {
               $("#test").html(result);

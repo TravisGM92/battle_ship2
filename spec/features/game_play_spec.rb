@@ -20,7 +20,8 @@ RSpec.describe 'Play game page' do
       click_button('Play!')
       fill_in :user_name, with: 'George'
       click_button("Let's play")
-      expect(current_path).to eq('/game')
+      expect(current_path).to eq('/setup')
+      expect(page).to have_content('George')
     end
   end
 end

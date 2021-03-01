@@ -15,7 +15,7 @@
           <button type="text" id="play-button" class="but"><p>Play<b class="exclaim">!</b></p></button>
           <!-- <br> -->
             <div class="content">
-              <form class="user-name" action="/game" method="get">
+              <form class="user-name" action="/setup" method="get">
                 <input type="text" name="user_name" placeholder="Give us your name" id="user_name" required><br>
                 <button type="submit" id="lets-play-button">Let's play</button>
                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
