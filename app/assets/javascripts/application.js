@@ -42,7 +42,7 @@ $(document).ready(function ( $ ) {
   $(".test_button").click(function() {
       $.ajax({
           type: "GET",
-          url: "http://localhost:3000/game",
+          url: "http://localhost:3000/test",
           data: {"user_name": $("#user_name").val()},
           success: function(result) {
               $("#test").html(result);
@@ -71,20 +71,15 @@ $(document).ready(function ( $ ) {
 
 window.onload = function () {
             setTimeout(appeardiv,2100);
-        }
-        function appeardiv() {
-            document.getElementById('message1').style.display= "block";
-        }
+        };
+function appeardiv() {
+  document.getElementById('message1').style.display= "block";
+};
+function appeardiv() {
+  document.getElementById('message2').style.display= "block";
+};
 
-// //       $('.active').click(function(){
-// //   $('#main').animate({opacity: 0}, 1100, function() {
-// //       $(this).load('blank.html', function() {
-// //           $(this).animate({opacity: 1}, 1100);
-// //       });
-// //   });
-// //   return false;
-// // });
-//
+
 $(document).ready(function () {
   setTimeout(function () {
       $('#message1').animate({opacity: 0});
@@ -98,6 +93,9 @@ $(document).ready(function () {
   setTimeout(function () {
     $('.user_board').animate({ opacity: 1 });
   }, 8800);
+  setTimeout(function () {
+      $('.game_board_form').animate({ opacity: 1 });
+  }, 6600);
 });
 //
 // $(document).ready(function () {

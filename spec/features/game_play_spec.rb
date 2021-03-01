@@ -12,15 +12,3 @@ RSpec.describe 'Play game' do
     end
   end
 end
-
-RSpec.describe 'Play game page' do
-  describe 'lets play button' do
-    it 'once clicked redirects to /game' do
-      visit('/')
-      click_button('Play!')
-      fill_in :user_name, with: 'George'
-      click_button("Let's play")
-      expect(current_path).to eq('/game')
-    end
-  end
-end

@@ -71,6 +71,21 @@
     font-family: 'Press Start 2P';
   }
 
+  #message2 {
+    margin-top: 90px;
+    margin-left: 45px;
+    color: rgb(108, 246, 52);
+    display: inline-block;
+    overflow: hidden;
+    animation: typing 1.25s steps(30, end);
+    white-space: nowrap;
+    font-size: 120%;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-shadow: 3px 3px rgba(169, 255, 134, 0.4);
+    font-family: 'Press Start 2P';
+  }
+
   #space-gif2 {
     margin-left: -10px;
     margin-top: -200px;
@@ -80,6 +95,10 @@
   }
 
   #message1 {
+    display: none;
+  }
+
+  #message2 {
     display: none;
   }
 
