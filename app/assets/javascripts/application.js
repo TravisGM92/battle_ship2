@@ -88,6 +88,9 @@ $(document).ready(function () {
     $('.first1').animate({ opacity: 0 });
   }, 6400);
   setTimeout(function () {
+    $('.first2').animate({ opacity: 0 });
+  }, 6400);
+  setTimeout(function () {
     $('.computer_board').animate({ opacity: 1 });
   }, 7000);
   setTimeout(function () {
