@@ -25,49 +25,64 @@
 }
 
 #start {
-  margin-top: 20px;
-  margin-left: 200px;
-  background-color: white;
-  width: 300px;
+  margin-top: 50px;
+  margin-left: 90px;
+  background-color: rgba(193, 193, 194, 0.55);
+  color: green;
+  width: 550px;
   height: 100px;
   font-size: 55px;
+  color: rgb(108, 246, 52);
+  text-shadow: 3px 3px rgba(169, 255, 134, 0.4);
+  font-family: 'Press Start 2P';
 }
 
 #user_name_board {
-  margin-top: 0px;
+  margin-top: 20px;
+  margin-bottom: 35px;
   margin-left: 100px;
   width: 500px;
-  height: 100px;
+  height: 80px;
   font-size: 50px;
+  background-color: rgba(193, 193, 194, 0.55);
+  color: rgb(108, 246, 52);
+  text-shadow: 3px 3px rgba(169, 255, 134, 0.4);
+  font-family: 'Press Start 2P';
 }
 
 #user_name_label {
-  color: white;
-  font-size: 70px;
+  margin-top: 100px;
+  color: rgb(108, 246, 52);
+  text-shadow: 3px 3px rgba(169, 255, 134, 0.4);
+  font-family: 'Press Start 2P';
+  font-size: 40px;
   margin-left: 280px;
 }
 
 #number_of_ships_form {
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left: 300px;
-  height: 100px;
+  height: 80px;
   width: 80px;
   font-size: 60px;
 }
 
 #number_of_ships_label {
-  margin-top: 20px;
-  color: white;
-  font-size: 70px;
-  margin-left: 180px;
+  margin-top: 70px;
+  font-size: 40px;
+  margin-left: 150px;
+  color: rgb(108, 246, 52);
+  text-shadow: 3px 3px rgba(169, 255, 134, 0.4);
+  font-family: 'Press Start 2P';
 }
 
 #comp_diff {
-  margin-top: 20px;
-  margin-left: 250px;
+  margin-top: 50px;
+  margin-left: 220px;
   height: 90px;
-  width: 200px;
-  font-size: 70px;
+  width: 250px;
+  font-size: 60px;
+  font-family: 'Press Start 2P';
 }
 
 
