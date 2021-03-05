@@ -7,7 +7,7 @@ RSpec.describe 'Play game' do
     it 'when clicked opens field for user name input and a button' do
       visit('/')
       click_button('Play!')
-      expect(page).to have_css('#user_name')
+      expect(page).to have_css('#how_many_ships')
       expect(page).to have_button("Let's play")
     end
   end
