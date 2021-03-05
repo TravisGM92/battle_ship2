@@ -6,20 +6,23 @@
   </head>
   <body>
     <img src="https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif" alt="space gif" id="space-gif2">
-    <div class="first1">
-      <div class="text1">
+    <div class="first2">
+      <div class="text2">
         <p id="message2" class="show">Alright <%=@user.name%>, let's set some expectations...</p>
       </div>
     </div>
 
     <div class="game_board_form" id="game_board_form">
-      <form class="game_board_form" action="/setup" method="get">
+      <form class="game_board_form" action="/setup" method="post">
+        <label for="user_name_board" id="user_name_label">You</label><br>
         <input type="text" name="user_name" placeholder="<%=@user.name%>" id="user_name_board" readonly><br>
-        <input type="number" name="number_of_ships" value="1"><br>
-        <select class="computer_difficulty" name="difficulty"><br>
+        <label for="number_of_ships_form" id="number_of_ships_label"># of ships:</label><br>
+        <input type="number" name="number_of_ships" id="number_of_ships_form" value="1"><br>
+        <label for="comp_diff"></label>
+        <select class="computer_difficulty" name="difficulty" id="comp_diff"><br>
           <option value="easy">Easy</option>
           <option value="hard">Saucy</option>
-        </select>
+        </select><br>
         <button type="submit" id="start">Let's go!</button>
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
       </form>
