@@ -34,7 +34,7 @@ $(document).ready(function( $ ) {
 
 $(document).ready(function ( $ ) {
   $(".test_button").click(function() {
-      $("#test").text($("#user_name").val());
+      $("#test").text($("#how_many_ships").val());
   });
 });
 

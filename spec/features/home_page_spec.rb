@@ -24,8 +24,19 @@ RSpec.describe 'Play game' do
     it 'when clicked opens field for user name input and a button' do
       visit('/')
       click_button('Play!')
-      expect(page).to have_css('#user_name')
+      expect(page).to have_css('#how_many_ships')
       expect(page).to have_button("Let's play")
     end
+  end
+end
+
+RSpec.describe 'Play game button' do
+  it 'there is a label for number of ships' do
+    visit('/')
+    click_button('Play!')
+    expect(page).to have_content('How many ships?')
+  end
+  it 'when number of ships is indicated and Lets play button is hit, user is redirected to game page' do
+
   end
 end

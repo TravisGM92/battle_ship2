@@ -13,7 +13,7 @@
     </div>
 
     <div class="game_board_form" id="game_board_form">
-      <form class="game_board_form" action="/board" method="post">
+      <form class="game_board_form" action="/setup" method="post">
         <label for="user_name_board" id="user_name_label">You</label><br>
         <input type="text" name="user_name" placeholder="<%=@user.name%>" id="user_name_board" readonly><br>
         <label for="number_of_ships_form" id="number_of_ships_label"># of ships:</label><br>
@@ -23,7 +23,7 @@
           <option value="easy">Easy</option>
           <option value="hard">Saucy</option>
         </select><br>
-        <button type="submit" id="place_ships_button">Let's place your ships</button>
+        <button type="submit" id="start">Let's go!</button>
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
       </form>
     </div>
