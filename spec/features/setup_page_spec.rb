@@ -21,10 +21,18 @@ RSpec.describe 'Setup game page' do
       fill_in :user_name, with: 'George'
       click_button("Let's play")
       expect(current_path).to eq('/setup')
-      expect(find_field('You').value).to eq('George')
+      expect(page).to have_content('George')
     end
     it 'has a form with # of ships, difficulty, and placement of ships' do
-      
+      # visit('/')
+      # click_button('Play!')
+      # fill_in :user_name, with: 'George'
+      # click_button("Let's play")
+      # expect(current_path).to eq('/setup')
+      # fill_in :number_of_ships_form, with: 2
+      # find('#comp_diff').find(:xpath, 'option[1]').select_option
+      # click_button("Let's go!")
+      # expect(current_path).to eq('/game')
     end
   end
 end
