@@ -23,7 +23,7 @@ $(document).ready(function( $ ) {
 });
 
 $(document).ready(function( $ ) {
-  $(".but").click (function(){
+  $(".first-play-button").click (function(){
     // Close all open windows
     // $(".content").stop().slideUp(100);
     $(".rules").toggle("slow")
