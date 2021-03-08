@@ -25,18 +25,18 @@ $(document).ready(function( $ ) {
 $(document).ready(function( $ ) {
   $(".but").click (function(){
     // Close all open windows
-    $(".content").stop().slideUp(100);
+    // $(".content").stop().slideUp(100);
     $(".rules").toggle("slow")
     // Toggle this window open/close
     $(this).next(".content").stop().slideToggle(100);
   });
 });
 
-$(document).ready(function ( $ ) {
-  $(".test_button").click(function() {
-      $("#test").text($("#how_many_ships").val());
-  });
-});
+// $(document).ready(function ( $ ) {
+//   $(".test_button").click(function() {
+//       $("#test").text($("#how_many_ships").val());
+//   });
+// });
 
 $(document).ready(function ( $ ) {
   $(".test_button").click(function() {

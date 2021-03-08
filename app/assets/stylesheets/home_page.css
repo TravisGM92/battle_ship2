@@ -87,8 +87,9 @@
   }
 
  .content {
+   margin-top: 100px;
     background-color: black;
-    width: 200px;
+    width: 300px;
     height: 0px;
     position: absolute;
     border-radius: 5px;
@@ -131,7 +132,7 @@
   }
 
   #army-tank-gif {
-    margin-top: 0px;
+    margin-top: 100px;
     width: 315px;
     margin-left: 29%;
   }
