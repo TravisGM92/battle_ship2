@@ -37,6 +37,10 @@ RSpec.describe 'Play game button' do
     expect(page).to have_content('How many ships?')
   end
   it 'when number of ships is indicated and Lets play button is hit, user is redirected to game page' do
-
+    visit('/')
+    click_button('Play!')
+    fill_in :how_many_ships, with: 2
+    click_button("Let's play")
+    expect(current_path).to eq('/game')
   end
 end

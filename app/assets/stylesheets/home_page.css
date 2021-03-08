@@ -119,6 +119,12 @@
    font-size: 50px;
  }
 
+ #label_number_ships {
+   font-family: 'Press Start 2P';
+   font-size: 20px;
+   color: black;
+ }
+ 
   @keyframes blink {
     from { color: green }
     to { color: rgba(0, 111, 41, 0.2) }
@@ -129,4 +135,5 @@
     width: 315px;
     margin-left: 29%;
   }
+
 }
