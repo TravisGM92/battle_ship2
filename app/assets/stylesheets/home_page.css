@@ -52,7 +52,6 @@
 
   .play-game {
     margin-top: -90px;
-    margin-left: 33%;
   }
 
   .game-rules {
@@ -73,6 +72,7 @@
   #play-button {
     width: 55%;
     height: 100px;
+    margin-left: 185px;
   }
 
   #rules-button {
@@ -89,12 +89,9 @@
  .content {
    margin-top: 100px;
     background-color: black;
-    width: 300px;
-    height: 0px;
+    width: 900px;
     position: absolute;
-    border-radius: 5px;
     display: none;
-    margin-left: 3px;
  }
 
  .user-name {
@@ -104,8 +101,8 @@
  }
 
  #how_many_ships {
-   margin-left: -90px;
-   margin-top: 240px;
+   margin-top: -20px;
+   margin-left: 350px;
    position: absolute;
    border: solid black 2px;
    width: 100px;
@@ -115,14 +112,20 @@
  }
 
  #lets-play-button {
+   margin-top: -100px;
+   margin-left: 250px;
+   position: absolute;
    width: 320px;
    height: 80px;
-   font-size: 50px;
+   font-size: 40px;
+   font-family: 'Press Start 2P';
  }
 
  #label_number_ships {
+   margin-top: 20px;
+   margin-left: 80px;
    font-family: 'Press Start 2P';
-   font-size: 20px;
+   font-size: 50px;
    color: black;
  }
 
@@ -132,7 +135,7 @@
   }
 
   #army-tank-gif {
-    margin-top: 100px;
+    position: absolute;
     width: 315px;
     margin-left: 29%;
   }
