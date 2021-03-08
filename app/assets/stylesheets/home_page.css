@@ -102,7 +102,7 @@
 
  #how_many_ships {
    margin-top: -20px;
-   margin-left: 350px;
+   margin-left: 340px;
    position: absolute;
    border: solid black 2px;
    width: 100px;
@@ -112,8 +112,8 @@
  }
 
  #lets-play-button {
-   margin-top: -100px;
-   margin-left: 250px;
+   margin-top: -110px;
+   margin-left: 240px;
    position: absolute;
    width: 320px;
    height: 80px;
@@ -123,9 +123,9 @@
 
  #label_number_ships {
    margin-top: 20px;
-   margin-left: 80px;
+   margin-left: 50px;
    font-family: 'Press Start 2P';
-   font-size: 50px;
+   font-size: 40px;
    color: black;
  }
 
@@ -136,6 +136,7 @@
 
   #army-tank-gif {
     position: absolute;
+    margin-top: 10px;
     width: 315px;
     margin-left: 29%;
   }
