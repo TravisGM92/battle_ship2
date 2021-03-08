@@ -107,7 +107,7 @@
    margin-top: 240px;
    position: absolute;
    border: solid black 2px;
-   width: 500px;
+   width: 100px;
    height: 100px;
    font-size: 40px;
    border-radius: 6px;
@@ -124,7 +124,7 @@
    font-size: 20px;
    color: black;
  }
- 
+
   @keyframes blink {
     from { color: green }
     to { color: rgba(0, 111, 41, 0.2) }
