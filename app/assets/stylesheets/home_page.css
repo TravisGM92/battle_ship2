@@ -19,13 +19,6 @@
     height: 110%;
   }
 
-  .home_page {
-    margin-left: -8px;
-    display: inline-block;
-    overflow: hidden;
-    width: 100%;
-  }
-
   .title p {
     margin-top: 50px;
     font-size: 45px;
@@ -42,42 +35,39 @@
     width: 75%;
     height: 55%;
     position: absolute;
-    z-index: 999;
-    color: white;
     background-color: rgb(182, 175, 176);
     font-size: 200px;
     border-radius: 2px;
     border: solid green 4px;
   }
 
-  .play-game {
-    margin-top: -90px;
-    margin-left: 33%;
-  }
-
-  .game-rules {
-    margin-top: -50px;
-    margin-left: 18%;
-  }
-
   .game-rules p {
     margin-top: 25px;
-    margin-bottom: 16px;
   }
 
-  .play-game p {
+  .game-div p {
     margin-top: 25px;
   }
 
 
   #play-button {
-    width: 55%;
+    width: 45%;
     height: 100px;
+    margin-left: 205px;
+  }
+
+  .first-play-button {
+    position: absolute;
   }
 
   #rules-button {
     height: 105px;
-    width: 80%;
+    width: 60%;
+    margin-left: 155px;
+  }
+
+  .rules {
+    margin-top: 100px;
   }
 
   .exclaim {
@@ -87,36 +77,43 @@
   }
 
  .content {
-    background-color: black;
-    width: 200px;
-    height: 0px;
+   margin-top: 200px;
+    width: 900px;
     position: absolute;
-    border-radius: 5px;
     display: none;
-    margin-left: 3px;
  }
 
- .user-name {
-   height: 0px;
+ .number_of_ships_form {
    margin-top: -230px;
    margin-left: 0px;
  }
 
- #how_many_ships {
-   margin-left: -90px;
-   margin-top: 240px;
+ #how_many_ships_input {
+   margin-left: 340px;
    position: absolute;
    border: solid black 2px;
-   width: 500px;
+   width: 100px;
    height: 100px;
    font-size: 40px;
    border-radius: 6px;
  }
 
  #lets-play-button {
+   margin-top: -110px;
+   margin-left: 240px;
+   position: absolute;
    width: 320px;
    height: 80px;
-   font-size: 50px;
+   font-size: 40px;
+   font-family: 'Press Start 2P';
+ }
+
+ #label_number_ships {
+   margin-top: 20px;
+   margin-left: 50px;
+   font-family: 'Press Start 2P';
+   font-size: 40px;
+   color: black;
  }
 
   @keyframes blink {
@@ -125,8 +122,10 @@
   }
 
   #army-tank-gif {
-    margin-top: 0px;
+    position: absolute;
+    margin-top: 10px;
     width: 315px;
     margin-left: 29%;
   }
+
 }

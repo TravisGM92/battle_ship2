@@ -11,13 +11,12 @@
       <div class="title">
         <p>Time to play</p>
         <p>BattleShip!</p>
-        <div class="play-game">
-          <button type="text" id="play-button" class="but"><p>Play<b class="exclaim">!</b></p></button>
-
+        <div class="game-div">
+          <button type="text" id="play-button" class="first-play-button"><p>Play<b class="exclaim">!</b></p></button>
             <div class="content">
-              <form class="user-name" action="/setup" method="get">
-                <label for="how_many_ships">How many ships?</label>
-                <input type="number" name="how_many_ships" id="how_many_ships" value="1" min="1" max="5"><br>
+              <form class="number_of_ships_form" action="/setup" method="get">
+                <label for="how_many_ships" id="label_number_ships">How many ships?</label><br>
+                <input type="number" name="how_many_ships" id="how_many_ships_input" value="1" min="1" max="5"><br>
                 <button type="submit" id="lets-play-button">Let's play</button>
                 <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
               </form>
